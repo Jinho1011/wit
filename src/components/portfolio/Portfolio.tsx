@@ -23,7 +23,7 @@ const Portfolio = ({ year, slides }: PortfolioProps) => {
         <Title>{year}</Title>
       </div>
       <StyledSwiper
-        slidesPerView="auto"
+        slidesPerView={3}
         spaceBetween={10}
         loop={true}
         centeredSlides={true}
