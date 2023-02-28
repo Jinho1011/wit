@@ -32,24 +32,13 @@ const Portfolio = ({ year, slides }: PortfolioProps) => {
         }}
         modules={[Pagination, Navigation]}
       >
-        <SwiperSlide>
-          <Slide>11111</Slide>
-        </SwiperSlide>
-        <SwiperSlide>
-          <Slide>22222</Slide>
-        </SwiperSlide>
-        <SwiperSlide>
-          <Slide>3333</Slide>
-        </SwiperSlide>
-        <SwiperSlide>
-          <Slide>44444</Slide>
-        </SwiperSlide>
-        <SwiperSlide>
-          <Slide>55555</Slide>
-        </SwiperSlide>
-        <SwiperSlide>
-          <Slide>66666</Slide>
-        </SwiperSlide>
+        {slides.map((slide) => {
+          return (
+            <SwiperSlide key={slide.src}>
+              <Slide>{slide.src}</Slide>
+            </SwiperSlide>
+          );
+        })}
       </StyledSwiper>
     </Flex>
   );
