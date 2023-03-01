@@ -1,8 +1,9 @@
 import React from 'react';
 
 interface TextProps {
-  size: number;
   children: React.ReactNode;
+  size?: number;
+  lineHeight?: React.CSSProperties['lineHeight'];
   tag?: 'h1' | 'h2' | 'h3' | 'span';
   weight?: React.CSSProperties['fontWeight'];
   color?: React.CSSProperties['color'];
@@ -10,15 +11,16 @@ interface TextProps {
 }
 
 const Text = ({
-  size,
+  size = 16,
   tag,
+  lineHeight = `normal`,
   color = `#ffffff`,
   weight = `regular`,
   style,
   children,
 }: TextProps) => {
   const props = {
-    style: { fontSize: size, color, fontWeight: weight, ...style },
+    style: { fontSize: size, color, fontWeight: weight, lineHeight, ...style },
   };
 
   if (tag) {

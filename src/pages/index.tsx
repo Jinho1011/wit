@@ -1,24 +1,34 @@
-import { Card, CardImage, CardImageContainer, Main, Section } from '@/styles';
+import {
+  Card,
+  CardContainer,
+  CardImage,
+  CardImageContainer,
+  Main,
+  Section,
+} from '@/styles';
 import Layout from '@/components/layout';
 import Flex from '@/components/flex';
 import Text from '@/components/text';
 
 import { BsChevronDown } from '@react-icons/all-files/bs/BsChevronDown';
 import Portfolio from '@/components/portfolio';
+import Logo from '@/icons/Logo';
 
 export default function Home() {
   return (
     <Layout>
       <Main>
-        <Section
-          backgroundImageSrc="/background1.png"
-          style={{ height: `100vh` }}
-        >
+        <Section backgroundColor="#0000B1" style={{ height: `100vh` }}>
           <Flex
             flexDirection="column"
             justifyContent="space-between"
             alignItems="center"
-            style={{ height: `100%` }}
+            style={{
+              height: `100%`,
+              backgroundImage: `url('/background1.png')`,
+              backgroundSize: `cover`,
+              backgroundPosition: `center`,
+            }}
           >
             <Flex
               gap={10}
@@ -29,10 +39,12 @@ export default function Home() {
                 paddingTop: 20,
               }}
             >
-              <Text size={22}>apply</Text>
-              <img src="/arrow.png" />
+              <a href="/apply" style={{ textDecoration: `none` }}>
+                <Text size={22}>apply</Text>
+                <img src="/arrow.png" />
+              </a>
             </Flex>
-            <img src="/logo.png" />
+            <Logo />
             <Flex
               flexDirection="column"
               gap={10}
@@ -148,7 +160,7 @@ export default function Home() {
           >
             <Text size={32}>활동 소개</Text>
           </Flex>
-          <div style={{ paddingLeft: 11, paddingRight: 11 }}>
+          <CardContainer>
             <Card style={{ marginBottom: 38 }}>
               <div style={{ position: `relative` }}>
                 <CardImageContainer>
@@ -233,7 +245,7 @@ export default function Home() {
                 </Flex>
               </div>
             </Card>
-          </div>
+          </CardContainer>
         </Section>
         <Section
           snapAlign="start"

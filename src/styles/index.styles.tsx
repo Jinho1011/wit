@@ -29,6 +29,16 @@ const Section = styled.section<SectionProps>`
   background-position: center;
 `;
 
+const CardContainer = styled.div`
+  padding: 0 11px;
+  display: grid;
+  grid-template-columns: 1fr;
+
+  @media screen and (min-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+`;
+
 const Card = styled.div`
   padding: 2px;
   border-radius: 10px;
@@ -58,5 +68,5 @@ const CardImageContainer = styled.div`
   height: 100%;
 `;
 
-export { Main, Section, Card, CardImage, CardImageContainer };
+export { Main, Section, CardContainer, Card, CardImage, CardImageContainer };
 export type { SectionProps };
