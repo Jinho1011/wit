@@ -9,6 +9,7 @@ import {
 import Layout from '@/components/Layout';
 import Flex from '@/components/Flex';
 import Text from '@/components/Text';
+import { Helmet } from 'react-helmet';
 
 import { BsChevronDown } from '@react-icons/all-files/bs/BsChevronDown';
 import Portfolio from '@/components/Portfolio';
@@ -79,10 +80,14 @@ const portfolios = {
 export default function Home() {
   return (
     <Layout>
+      <Helmet>
+        <title>About WIT</title>
+        <link rel="preload" as="image" href="/background1.webp"></link>
+      </Helmet>
       <Main>
         <Section
           backgroundColor="#0000B1"
-          backgroundImageSrc="/background1.png"
+          backgroundImageSrc="/background1.webp"
           style={{ height: `100vh` }}
         >
           <Container>
