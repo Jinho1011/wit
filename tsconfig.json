@@ -14,7 +14,8 @@
       "@/*": ["./src/*"],
       "@/static/*": ["./static/*"],
       "@/styles/*": ["./src/styles/*"],
-      "@/components/*": ["./src/components/*"]
+      "@/components/*": ["./src/components/*"],
+      "@/Icons/*": ["./src/Icons/*"]
     },
     "types": ["node", "@testing-library/jest-dom"]
   },
