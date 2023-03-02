@@ -5,14 +5,14 @@ import {
   CardImageContainer,
   Main,
   Section,
-} from '@/styles';
-import Layout from '@/components/layout';
-import Flex from '@/components/flex';
-import Text from '@/components/text';
+} from '../styles';
+import Layout from '../components/layout';
+import Flex from '../components/flex';
+import Text from '../components/text';
 
 import { BsChevronDown } from '@react-icons/all-files/bs/BsChevronDown';
-import Portfolio from '@/components/portfolio';
-import Logo from '@/icons/Logo';
+import Portfolio from '../components/portfolio';
+import Logo from '../icons/Logo';
 
 export default function Home() {
   return (
