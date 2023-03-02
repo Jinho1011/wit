@@ -3,11 +3,14 @@ import React from 'react';
 
 const Main = styled.main`
   scroll-behavior: smooth;
-  height: 100vh;
+  /* height: 100vh; */
   scroll-snap-type: y mandatory;
   scroll-padding-top: 10px;
   overflow-y: scroll;
   overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   &::-webkit-scrollbar {
     width: 0;
@@ -27,16 +30,25 @@ const Section = styled.section<SectionProps>`
   background-color: ${({ backgroundColor }) => backgroundColor};
   background-size: cover;
   background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+`;
+
+const Container = styled.div`
+  width: 100%;
+  height: 100%;
+  max-width: 512px;
 `;
 
 const CardContainer = styled.div`
   padding: 0 11px;
   display: grid;
+  gap: 15px;
   grid-template-columns: 1fr;
-
-  @media screen and (min-width: 768px) {
-    grid-template-columns: repeat(2, 1fr);
-  }
 `;
 
 const Card = styled.div`
@@ -63,10 +75,5 @@ const CardImage = styled.img<{ borderSide: 'right' | 'left' }>`
   object-fit: cover;
 `;
 
-const CardImageContainer = styled.div`
-  width: 100%;
-  height: 100%;
-`;
-
-export { Main, Section, CardContainer, Card, CardImage, CardImageContainer };
+export { Main, Section, Container, CardContainer, Card, CardImage };
 export type { SectionProps };

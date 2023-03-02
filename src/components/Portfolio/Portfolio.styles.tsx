@@ -28,11 +28,9 @@ const StyledSwiper = styled(Swiper)`
   }
 `;
 
-const Slide = styled.div`
+const Slide = styled.img`
   width: 223px;
-  background-color: #fff;
   border-radius: 10px;
-  padding: 20px;
 `;
 
 export { BackgroundTitle, Title, StyledSwiper, Slide };

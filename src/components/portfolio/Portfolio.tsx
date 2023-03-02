@@ -12,7 +12,7 @@ import { Pagination, Navigation } from 'swiper';
 
 interface PortfolioProps {
   year: number;
-  slides: any[];
+  slides: { url: string; img: string }[];
 }
 
 const Portfolio = ({ year, slides }: PortfolioProps) => {
@@ -23,9 +23,10 @@ const Portfolio = ({ year, slides }: PortfolioProps) => {
         <Title>{year}</Title>
       </div>
       <StyledSwiper
+        initialSlide={1}
         slidesPerView={3}
-        spaceBetween={10}
-        loop={true}
+        spaceBetween={200}
+        // loop={true}
         centeredSlides={true}
         pagination={{
           clickable: true,
@@ -34,8 +35,10 @@ const Portfolio = ({ year, slides }: PortfolioProps) => {
       >
         {slides.map((slide) => {
           return (
-            <SwiperSlide key={slide.src}>
-              <Slide>{slide.src}</Slide>
+            <SwiperSlide key={slide.url}>
+              <a href={slide.url}>
+                <Slide src={slide.img} height={163} />
+              </a>
             </SwiperSlide>
           );
         })}
