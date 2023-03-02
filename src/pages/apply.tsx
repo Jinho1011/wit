@@ -9,6 +9,7 @@ import {
   CardDesc,
   CardTitle,
   Selector,
+  ApplyBtn,
 } from '@/styles/apply.styles';
 import SwitchSelector from 'react-switch-selector';
 
@@ -181,6 +182,17 @@ const Apply = () => {
                   </>
                 )}
               </Card>
+              <ApplyBtn isDesigner={isDesigner}>
+                <a
+                  href={
+                    isDesigner
+                      ? `https://forms.gle/t3gN9u1AczpVhrHb6`
+                      : `https://forms.gle/7rR4PguQFPzLKtof7`
+                  }
+                >
+                  지원하기
+                </a>
+              </ApplyBtn>
             </Flex>
           </Container>
         </Section>

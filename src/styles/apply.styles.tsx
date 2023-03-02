@@ -50,4 +50,18 @@ const Selector = styled.div`
   }
 `;
 
-export { CardContainer, CardTitle, CardBody, CardDesc, Selector };
+const ApplyBtn = styled.button<{ isDesigner: boolean }>`
+  border: none;
+  box-shadow: none;
+  border-radius: 0;
+  padding: 0;
+  overflow: visible;
+  cursor: pointer;
+  background: ${({ isDesigner }) => (isDesigner ? `#000` : `#00009c`)};
+  border-radius: 50px;
+  padding: 11px 26px;
+  color: #fff;
+  transition: 0.2s;
+`;
+
+export { CardContainer, CardTitle, CardBody, CardDesc, Selector, ApplyBtn };
