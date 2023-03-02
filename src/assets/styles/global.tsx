@@ -1,6 +1,42 @@
 import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
+  @font-face {
+      font-family: 'NanumSquareNeo';
+      font-weight: 300; 
+      font-style: normal; 
+      src: url(fonts/NanumSquareNeoTTF-aLt.woff2) format('woff2');
+      font-display: swap;
+    }
+    @font-face {
+        font-family: 'NanumSquareNeo';
+        font-weight: 400; 
+        font-style: normal; 
+        src: url(fonts/NanumSquareNeoTTF-bRg.woff2) format('woff2');
+        font-display: swap;
+    }
+    @font-face {
+        font-family: 'NanumSquareNeo';
+        font-weight: 700; 
+        font-style: normal; 
+        src: url(fonts/NanumSquareNeoTTF-cBd.woff2) format('woff2');
+        font-display: swap;
+    }
+    @font-face {
+        font-family: 'NanumSquareNeo';
+        font-weight: 800; 
+        font-style: normal; 
+        src: url(fonts/NanumSquareNeoTTF-dEb.woff2) format('woff2');
+        font-display: swap;
+    }
+    @font-face {
+        font-family: 'NanumSquareNeo';
+        font-weight: 900; 
+        font-style: normal; 
+        src: url(fonts/NanumSquareNeoTTF-eHv.woff2) format('woff2');
+        font-display: swap;
+    }
+
   html, body, div, span, applet, object, iframe,
   h1, h2, h3, h4, h5, h6, p, blockquote, pre,
   a, abbr, acronym, address, big, cite, code,
@@ -43,6 +79,11 @@ const GlobalStyle = createGlobalStyle`
   table {
     border-collapse: collapse;
     border-spacing: 0;
+  }
+
+  body {
+    font-family: NanumSquareNeo;
+    font-style: normal; 
   }
 `;
 

@@ -13,9 +13,9 @@
     "paths": {
       "@/*": ["./src/*"],
       "@/static/*": ["./static/*"],
-      "@/styles/*": ["./src/styles/*"],
+      "@/styles/*": ["src/assets/styles/*"],
       "@/components/*": ["./src/components/*"],
-      "@/Icons/*": ["./src/Icons/*"]
+      "@/Icons/*": ["src/assets/Icons/*"]
     },
     "types": ["node", "@testing-library/jest-dom"]
   },

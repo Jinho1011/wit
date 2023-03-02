@@ -8,8 +8,8 @@ export const onCreateWebpackConfig: GatsbyNode['onCreateWebpackConfig'] = ({
     resolve: {
       alias: {
         '@/components': path.resolve(__dirname, `./src/components`),
-        '@/styles': path.resolve(__dirname, `./src/styles`),
-        '@/Icons': path.resolve(__dirname, `./src/Icons`),
+        '@/assets/styles': path.resolve(__dirname, `./src/assets/styles`),
+        '@/assets/Icons': path.resolve(__dirname, `./src/assets/Icons`),
         '@/static': path.resolve(__dirname, `./static`),
       },
     },

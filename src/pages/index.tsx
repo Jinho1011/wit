@@ -5,7 +5,7 @@ import {
   Container,
   Main,
   Section,
-} from '@/styles';
+} from '@/assets/styles';
 import Layout from '@/components/Layout';
 import Flex from '@/components/Flex';
 import Text from '@/components/Text';
@@ -13,12 +13,12 @@ import { Helmet } from 'react-helmet';
 
 import { BsChevronDown } from '@react-icons/all-files/bs/BsChevronDown';
 import Portfolio from '@/components/Portfolio';
-import Logo from '@/Icons/Logo';
-import Cell1 from '@/Icons/Cell1';
-import Cell2 from '@/Icons/Cell2';
-import Event1 from '@/Icons/Event1';
-import Event2 from '@/Icons/Event2';
-import Event3 from '@/Icons/Event3';
+import Logo from '@/assets/Icons/Logo';
+import Cell1 from '@/assets/Icons/Cell1';
+import Cell2 from '@/assets/Icons/Cell2';
+import Event1 from '@/assets/Icons/Event1';
+import Event2 from '@/assets/Icons/Event2';
+import Event3 from '@/assets/Icons/Event3';
 
 const portfolios = {
   2020: [
@@ -82,6 +82,10 @@ export default function Home() {
     <Layout>
       <Helmet>
         <title>About WIT</title>
+        {/* <link
+          href="https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo.css"
+          rel="stylesheet"
+        ></link> */}
         <link rel="preload" as="image" href="/background1.webp"></link>
       </Helmet>
       <Main>
@@ -107,7 +111,9 @@ export default function Home() {
                 }}
               >
                 <a href="/apply" style={{ textDecoration: `none` }}>
-                  <Text size={22}>apply</Text>
+                  <Text size={22} style={{ marginRight: 10 }}>
+                    apply
+                  </Text>
                   <img src="/arrow.png" />
                 </a>
               </Flex>

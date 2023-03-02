@@ -24,8 +24,8 @@ const Portfolio = ({ year, slides }: PortfolioProps) => {
       </div>
       <StyledSwiper
         initialSlide={1}
-        slidesPerView={3}
-        spaceBetween={200}
+        slidesPerView={`auto`}
+        spaceBetween={20}
         // loop={true}
         centeredSlides={true}
         pagination={{

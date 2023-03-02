@@ -60,8 +60,12 @@ const ApplyBtn = styled.button<{ isDesigner: boolean }>`
   background: ${({ isDesigner }) => (isDesigner ? `#000` : `#00009c`)};
   border-radius: 50px;
   padding: 11px 26px;
-  color: #fff;
   transition: 0.2s;
+
+  a {
+    color: #fff;
+    text-decoration: none;
+  }
 `;
 
 export { CardContainer, CardTitle, CardBody, CardDesc, Selector, ApplyBtn };

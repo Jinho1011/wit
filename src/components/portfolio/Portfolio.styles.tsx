@@ -5,8 +5,8 @@ const BackgroundTitle = styled.span`
   font-size: 120px;
   color: rgba(255, 255, 255, 0.23);
   position: absolute;
-  bottom: -12px;
-  left: 0;
+  bottom: -11px;
+  left: 7.5px;
   font-weight: 900;
   /* line-height: 177px; */
 `;

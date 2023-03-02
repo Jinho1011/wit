@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Flex from '@/components/Flex';
 import Layout from '@/components/Layout';
 import Text from '@/components/Text';
-import { Container, Main, Section } from '@/styles';
+import { Container, Main, Section } from '@/assets/styles';
 import {
   CardContainer,
   CardBody,
@@ -10,7 +10,7 @@ import {
   CardTitle,
   Selector,
   ApplyBtn,
-} from '@/styles/apply.styles';
+} from '@/assets/styles/apply.styles';
 import SwitchSelector from 'react-switch-selector';
 
 const Apply = () => {
@@ -39,43 +39,47 @@ const Apply = () => {
   return (
     <Layout>
       <Main>
-        <Section
-          backgroundImageSrc="/apply.png"
-          style={{
-            paddingTop: 28,
-            paddingBottom: 30,
-            paddingLeft: 10,
-          }}
-        >
+        <Section backgroundImageSrc="/apply.png">
           <Container>
-            <Flex flexDirection="column" gap={32}>
-              <Text size={24} weight="bold" lineHeight={`124%`}>
-                Create products
-                <br /> that society needs
+            <Flex
+              flexDirection="column"
+              gap={18}
+              style={{
+                paddingTop: 28,
+                paddingBottom: 30,
+                paddingLeft: 10,
+              }}
+            >
+              <Text size={20} weight="bold" lineHeight={`145%`}>
+                배는 항구에 있어서 가장 안전하지만, <br />
+                그것은 배의 존재이유가 아닙니다
               </Text>
-              <Text size={18} weight="lighter" lineHeight={`169%`}>
-                지원장려문구 여기 들어갈거야
-                <br /> 우리 위트에 지원하면 뭐가 좋은지
-                <br /> 좋은 의견있으면 알려주시라요.
+              <Text
+                size={14}
+                weight="lighter"
+                lineHeight={`140%`}
+                style={{ paddingRight: 40 }}
+              >
+                WIT는 뚜렷한 목표를 가진 사람들이 모여 성장하고 있습니다.
+                <br />
+                가슴이 설레시나요? 지금이 바로 WIT에 합류할 때입니다.
               </Text>
             </Flex>
           </Container>
         </Section>
-        <Section
-          style={{
-            paddingTop: 56,
-            paddingBottom: 96,
-            paddingLeft: 10,
-            paddingRight: 10,
-          }}
-        >
+        <Section>
           <Container>
             <Flex
               flexDirection="column"
               justifyContent={`center`}
               alignItems="center"
               gap={38}
-              style={{ marginBottom: 80 }}
+              style={{
+                marginBottom: 80,
+                paddingTop: 56,
+                paddingLeft: 10,
+                paddingRight: 10,
+              }}
             >
               <Text size={21} color={`#000`}>
                 지원
@@ -108,7 +112,11 @@ const Apply = () => {
               justifyContent={`center`}
               alignItems="center"
               gap={38}
-              style={{ marginBottom: 80 }}
+              style={{
+                marginBottom: 80,
+                paddingLeft: 10,
+                paddingRight: 10,
+              }}
             >
               <Text size={21} color={`#000`}>
                 지원
@@ -131,6 +139,7 @@ const Apply = () => {
               justifyContent={`center`}
               alignItems="center"
               gap={38}
+              style={{ paddingLeft: 10, paddingRight: 10, paddingBottom: 100 }}
             >
               <Text size={21} color={`#000`}>
                 모집 분야
