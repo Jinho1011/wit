@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
-import Flex from '../components/flex';
-import Layout from '../components/layout';
-import Text from '../components/text';
-import { Main, Section } from '../styles';
+import Flex from '@/components/Flex';
+import Layout from '@/components/Layout';
+import Text from '@/components/Text';
+import { Main, Section } from '@/styles';
 import {
   CardContainer,
   CardBody,
   CardDesc,
   CardTitle,
   Selector,
-} from '../styles/apply.styles';
+} from '@/styles/apply.styles';
 import SwitchSelector from 'react-switch-selector';
 
 const Apply = () => {
