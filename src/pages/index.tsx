@@ -22,7 +22,7 @@ import Event1 from '@/assets/Icons/Event1';
 import Event2 from '@/assets/Icons/Event2';
 import Event3 from '@/assets/Icons/Event3';
 import Arrow from '@/assets/Icons/Arrow';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useLayoutEffect, useRef, useState } from 'react';
 
 const portfolios = {
   2020: [
@@ -85,15 +85,21 @@ export default function Home() {
   const target = useRef(null);
   const [isIntersecting, setIsIntersecting] = useState(true);
 
-  const observer = new IntersectionObserver(
-    (entries) => {
-      setIsIntersecting(entries[0].isIntersecting);
-    },
-    { rootMargin: `-50px` },
-  );
+  let observer: any = null;
+
+  useLayoutEffect(() => {
+    if (window.IntersectionObserver) {
+      observer = new IntersectionObserver(
+        (entries) => {
+          setIsIntersecting(entries[0].isIntersecting);
+        },
+        { rootMargin: `-50px` },
+      );
+    }
+  }, []);
 
   useEffect(() => {
-    if (target.current) {
+    if (target.current && observer) {
       observer.observe(target.current);
     }
   }, [observer, target]);
