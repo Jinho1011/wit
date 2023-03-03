@@ -2,15 +2,10 @@ import styled, { css } from 'styled-components';
 import React from 'react';
 
 const Main = styled.main`
-  scroll-behavior: smooth;
-  /* height: 100vh; */
+  height: 100vh;
   scroll-snap-type: y mandatory;
-  scroll-padding-top: 10px;
   overflow-y: scroll;
   overflow-x: hidden;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 
   &::-webkit-scrollbar {
     width: 0;
@@ -34,8 +29,6 @@ const Section = styled.section<SectionProps>`
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
-  height: 100%;
 `;
 
 const Container = styled.div`
