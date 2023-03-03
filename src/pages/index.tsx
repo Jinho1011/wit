@@ -161,7 +161,7 @@ export default function Home() {
                   <Text
                     size={40}
                     weight="bold"
-                    style={{ paddingTop: 50, paddingBottom: 5 }}
+                    style={{ paddingTop: 50, paddingBottom: 10 }}
                   >
                     we&apos;re
                   </Text>

@@ -17,7 +17,7 @@ interface PortfolioProps {
 
 const Portfolio = ({ year, slides }: PortfolioProps) => {
   return (
-    <Flex flexDirection="column" style={{ marginBottom: 60 }}>
+    <Flex flexDirection="column" style={{ marginBottom: 60 }} gap={24}>
       <div style={{ position: `relative`, paddingLeft: 10, paddingRight: 10 }}>
         <BackgroundTitle>{year}</BackgroundTitle>
         <Title>{year}</Title>
