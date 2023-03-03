@@ -40,27 +40,25 @@ const Apply = () => {
     <Layout>
       <Main>
         <Section backgroundImageSrc="/apply.png">
-          <Container>
-            <Flex
-              flexDirection="column"
-              gap={18}
-              style={{
-                paddingTop: 28,
-                paddingBottom: 30,
-                paddingLeft: 10,
-                paddingRight: 10,
-              }}
-            >
-              <Text size={18} weight="bold" lineHeight={`145%`}>
-                배는 항구에 있을 때 가장 안전하지만, <br />
-                그것은 배의 존재이유가 아닙니다
-              </Text>
-              <Text size={14} weight="lighter" lineHeight={`150%`}>
-                WIT는 뚜렷한 목표를 가진 사람들이 모여 성장하고 있습니다.
-                <br /> 가슴이 설레시나요? 지금이 바로 WIT에 합류할 때입니다.
-              </Text>
-            </Flex>
-          </Container>
+          <Flex
+            flexDirection="column"
+            gap={18}
+            style={{
+              paddingTop: 28,
+              paddingBottom: 30,
+              paddingLeft: 10,
+              paddingRight: 10,
+            }}
+          >
+            <Text size={18} weight="bold" lineHeight={`145%`}>
+              배는 항구에 있을 때 가장 안전하지만, <br />
+              그것은 배의 존재이유가 아닙니다
+            </Text>
+            <Text size={14} weight="lighter" lineHeight={`150%`}>
+              WIT는 뚜렷한 목표를 가진 사람들이 모여 성장하고 있습니다.
+              <br /> 가슴이 설레시나요? 지금이 바로 WIT에 합류할 때입니다.
+            </Text>
+          </Flex>
         </Section>
         <Section>
           <Container>

@@ -1,3 +1,5 @@
+/* eslint-disable react-hooks/exhaustive-deps */
+/* eslint-disable import/export */
 import {
   Card,
   CardContainer,
@@ -19,6 +21,7 @@ import Cell2 from '@/assets/Icons/Cell2';
 import Event1 from '@/assets/Icons/Event1';
 import Event2 from '@/assets/Icons/Event2';
 import Event3 from '@/assets/Icons/Event3';
+import { useEffect, useRef, useState } from 'react';
 
 const portfolios = {
   2020: [
@@ -78,11 +81,30 @@ const portfolios = {
 };
 
 export default function Home() {
+  const target = useRef(null);
+  const [isIntersecting, setIsIntersecting] = useState(true);
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      setIsIntersecting(entries[0].isIntersecting);
+    },
+    { rootMargin: `-50px` },
+  );
+
+  useEffect(() => {
+    if (target.current) {
+      observer.observe(target.current);
+    }
+  }, [observer, target]);
+
   return (
     <Layout>
       <Helmet>
         <title>About WIT</title>
-        <meta name="theme-color" content="#000000" />
+        <meta
+          name="theme-color"
+          content={isIntersecting ? `#0000B1` : `#000`}
+        />
         <meta
           name="viewport"
           content="initial-scale=1, viewport-fit=cover"
@@ -91,6 +113,7 @@ export default function Home() {
       </Helmet>
       <Main>
         <Section
+          ref={target}
           backgroundColor="#0000B1"
           backgroundImageSrc="/background1.webp"
           fullHeight
