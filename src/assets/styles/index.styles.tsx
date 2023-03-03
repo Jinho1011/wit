@@ -2,10 +2,15 @@ import styled, { css } from 'styled-components';
 import React from 'react';
 
 const Main = styled.main`
-  height: 100vh;
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
   overflow-x: hidden;
+
+  /* height: calc(var(--vh, 1vh) * 100); */
+  height: 100vh;
+  @supports (-webkit-appearance: none) and (stroke-color: transparent) {
+    height: -webkit-fill-available;
+  }
 
   &::-webkit-scrollbar {
     width: 0;
@@ -17,6 +22,7 @@ const Main = styled.main`
 interface SectionProps {
   backgroundImageSrc?: string;
   backgroundColor?: string;
+  fullHeight?: boolean;
   snapAlign?: React.CSSProperties['scrollSnapAlign'];
 }
 const Section = styled.section<SectionProps>`
@@ -25,6 +31,18 @@ const Section = styled.section<SectionProps>`
   background-color: ${({ backgroundColor }) => backgroundColor};
   background-size: cover;
   background-position: center;
+
+  ${({ fullHeight }) => {
+    if (fullHeight) {
+      return `
+      min-height: 100vh;
+    @supports (-webkit-appearance:none) and (stroke-color: transparent) {
+      min-height: -webkit-fill-available;
+    }
+      `;
+    }
+  }}
+
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -33,7 +51,10 @@ const Section = styled.section<SectionProps>`
 
 const Container = styled.div`
   width: 100%;
-  height: 100%;
+  min-height: 100vh;
+  @supports (-webkit-appearance: none) and (stroke-color: transparent) {
+    min-height: -webkit-fill-available;
+  }
   max-width: 512px;
 `;
 

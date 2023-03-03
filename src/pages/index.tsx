@@ -82,24 +82,25 @@ export default function Home() {
     <Layout>
       <Helmet>
         <title>About WIT</title>
-        {/* <link
-          href="https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo.css"
-          rel="stylesheet"
-        ></link> */}
+        <meta name="theme-color" content="#000000" />
+        <meta
+          name="viewport"
+          content="initial-scale=1, viewport-fit=cover"
+        ></meta>
         <link rel="preload" as="image" href="/background1.webp"></link>
       </Helmet>
       <Main>
         <Section
           backgroundColor="#0000B1"
           backgroundImageSrc="/background1.webp"
-          style={{ height: `100vh` }}
+          fullHeight
         >
           <Container>
             <Flex
               flexDirection="column"
               justifyContent="space-between"
               alignItems="center"
-              style={{ height: `100%` }}
+              fullHeight
             >
               <Flex
                 gap={10}
@@ -130,12 +131,7 @@ export default function Home() {
             </Flex>
           </Container>
         </Section>
-        <Section
-          backgroundImageSrc="/section1.png"
-          style={{
-            height: `100vh`,
-          }}
-        >
+        <Section backgroundImageSrc="/section1.png" fullHeight>
           <Flex
             justifyContent={`center`}
             style={{
@@ -198,8 +194,8 @@ export default function Home() {
         </Section>
         <Section
           backgroundColor="#000000"
+          snapAlign={`start`}
           style={{ paddingBottom: 60 }}
-          snapAlign="start"
         >
           <Container>
             <Flex
@@ -321,7 +317,7 @@ export default function Home() {
           </Container>
         </Section>
         <Section
-          snapAlign="start"
+          snapAlign={`start`}
           backgroundImageSrc="/background2.png"
           style={{
             paddingTop: 80,

@@ -10,6 +10,7 @@ interface FlexStyleProps {
 
 interface FlexProps extends FlexStyleProps {
   children: React.ReactNode;
+  fullHeight?: boolean;
   style?: React.CSSProperties;
 }
 
@@ -18,6 +19,7 @@ const Flex = ({
   justifyContent,
   gap,
   alignItems,
+  fullHeight = false,
   style,
   children,
 }: FlexProps) => {
@@ -27,6 +29,7 @@ const Flex = ({
       flexDirection={flexDirection}
       alignItems={alignItems}
       justifyContent={justifyContent}
+      fullHeight={fullHeight}
       style={style}
     >
       {children}
@@ -34,12 +37,22 @@ const Flex = ({
   );
 };
 
-const Container = styled.div<FlexStyleProps>`
+const Container = styled.div<{ fullHeight: boolean } & FlexStyleProps>`
   display: flex;
   gap: ${({ gap }) => `${gap}px` || 0};
   flex-direction: ${({ flexDirection }) => flexDirection};
   align-items: ${({ alignItems }) => alignItems};
   justify-content: ${({ justifyContent }) => justifyContent};
+  ${({ fullHeight }) => {
+    if (fullHeight) {
+      return `
+      min-height: 100vh;
+    @supports (-webkit-appearance:none) and (stroke-color: transparent) {
+      min-height: -webkit-fill-available;
+    }
+      `;
+    }
+  }}
 `;
 
 export default Flex;

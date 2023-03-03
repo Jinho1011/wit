@@ -104,7 +104,12 @@ const GlobalStyle = createGlobalStyle`
   body {
     font-family: NanumSquareNeo;
     font-style: normal; 
+    min-height: 100vh;
+    @supports (-webkit-appearance:none) and (stroke-color: transparent) {
+      min-height: -webkit-fill-available;
+    }
   }
+  
 `;
 
 export default GlobalStyle;
