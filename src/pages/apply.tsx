@@ -48,21 +48,16 @@ const Apply = () => {
                 paddingTop: 28,
                 paddingBottom: 30,
                 paddingLeft: 10,
+                paddingRight: 10,
               }}
             >
-              <Text size={20} weight="bold" lineHeight={`145%`}>
-                배는 항구에 있어서 가장 안전하지만, <br />
+              <Text size={18} weight="bold" lineHeight={`145%`}>
+                배는 항구에 있을 때 가장 안전하지만, <br />
                 그것은 배의 존재이유가 아닙니다
               </Text>
-              <Text
-                size={14}
-                weight="lighter"
-                lineHeight={`140%`}
-                style={{ paddingRight: 40 }}
-              >
+              <Text size={14} weight="lighter" lineHeight={`150%`}>
                 WIT는 뚜렷한 목표를 가진 사람들이 모여 성장하고 있습니다.
-                <br />
-                가슴이 설레시나요? 지금이 바로 WIT에 합류할 때입니다.
+                <br /> 가슴이 설레시나요? 지금이 바로 WIT에 합류할 때입니다.
               </Text>
             </Flex>
           </Container>
@@ -82,7 +77,7 @@ const Apply = () => {
               }}
             >
               <Text size={21} color={`#000`}>
-                지원
+                지원 안내
               </Text>
               <div
                 style={{
@@ -93,17 +88,20 @@ const Apply = () => {
                   gap: 10,
                 }}
               >
-                <Card title="모집기간">
-                  wit는 1년에 한번 장기 프로젝트를 책임감 있게 함께할 동아리원을
-                  모집합니다
-                </Card>
                 <Card
                   title="지원자격"
                   desc="* 휴학·유예 여부와 관계없이    
                 지원가능합니다."
                 >
-                  긴시간 함께 하는데 문제가 없고, 평소 소통과 협업을 즐기는
-                  건국대학교 학생 누구나 지원할 수 있습니다
+                  프로젝트 기간 동안 열정적으로 참여하고 소통과 협업을 즐기는
+                  건국대학교 학생 누구나 지원할 수 있습니다.
+                </Card>
+                <Card
+                  title="유의사항"
+                  desc="* 시험기간 및 공휴일 일정에 따라 변동될 수 있습니다."
+                >
+                  활동시작일부터 <b>격주 월요일</b>마다 오프라인 미팅에 참석
+                  가능하신 분을 모집합니다.
                 </Card>
               </div>
             </Flex>
@@ -119,7 +117,7 @@ const Apply = () => {
               }}
             >
               <Text size={21} color={`#000`}>
-                지원
+                모집 일정
               </Text>
               <div
                 style={{
@@ -130,8 +128,11 @@ const Apply = () => {
                   // height: 100,
                 }}
               >
-                <Card title="서류접수">2023. 03. 06. (월) ~03. 13. (월)</Card>
-                <Card title="최종 결과 발표">2023. 03. 24. (금)</Card>
+                <Card title="서류접수">
+                  2023.03.03 (금) ~ <br />
+                  03.09 (목)
+                </Card>
+                <Card title="최종 결과 발표">2023.03.10 (금)</Card>
               </div>
             </Flex>
             <Flex
@@ -185,9 +186,10 @@ const Apply = () => {
                     <b>프론트엔드</b> <br />- 깃허브와 같은 코드형상관리툴을
                     사용해보신 분 <br />- React 사용 경험이 있으신 분 <br /> -
                     HTML5, CSS, SCSS 마크업 기술에 대한 이해가 있는 분 <br />
+                    <br />
                     <b>백엔드</b> <br />- 터미널(cli) 사용에 능숙한 분
-                    <br />- gcp 및 aws같이 클라우드 플랫폼을 써본 분 <br /> -
-                    간단한 도메인 구조 또는 스키마를 짜본 분
+                    <br />- gcp 및 aws와 같은 클라우드 플랫폼을 써본 분 <br /> -
+                    간단한 도메인 구조 또는 스키마를 짜보신 분
                   </>
                 )}
               </Card>
@@ -195,8 +197,8 @@ const Apply = () => {
                 <a
                   href={
                     isDesigner
-                      ? `https://forms.gle/t3gN9u1AczpVhrHb6`
-                      : `https://forms.gle/7rR4PguQFPzLKtof7`
+                      ? `https://forms.gle/9BzquMFukzQUMNj69`
+                      : `https://forms.gle/k1LYxhaiH7TTa1vC7`
                   }
                 >
                   지원하기
