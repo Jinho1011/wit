@@ -21,60 +21,61 @@ import Cell2 from '@/assets/Icons/Cell2';
 import Event1 from '@/assets/Icons/Event1';
 import Event2 from '@/assets/Icons/Event2';
 import Event3 from '@/assets/Icons/Event3';
+import Arrow from '@/assets/Icons/Arrow';
 import { useEffect, useRef, useState } from 'react';
 
 const portfolios = {
   2020: [
     {
-      img: `/2020/checku.png`,
+      img: `/2020/checku.webp`,
       url: `https://trusting-raincoat-f84.notion.site/CheckKU-8aa2d63ad7f94ff59c51f22f1d0ed4cc`,
     },
     {
-      img: `/2020/baton.png`,
+      img: `/2020/baton.webp`,
       url: `https://trusting-raincoat-f84.notion.site/baton-dcdb744b5cbe46a9bc77e5e42c968c81`,
     },
     {
-      img: `/2020/wesing.png`,
+      img: `/2020/wesing.webp`,
       url: `https://trusting-raincoat-f84.notion.site/9d95aba603c944ee9cd21b136724e73b`,
     },
     {
-      img: `/2020/kuing.png`,
+      img: `/2020/kuing.webp`,
       url: `https://trusting-raincoat-f84.notion.site/fb48580b9ca7449f8d5eb5b0f098960f`,
     },
     {
-      img: `/2020/삼삼오오.png`,
+      img: `/2020/삼삼오오.webp`,
       url: `https://trusting-raincoat-f84.notion.site/715baef38246478d936e0a55f51d1db7`,
     },
     {
-      img: `/2020/ecomment.png`,
+      img: `/2020/ecomment.webp`,
       url: `https://trusting-raincoat-f84.notion.site/Ecommnet-6a2f7b8e3a84401a8ee7448b405a7621`,
     },
   ],
   2021: [
     {
-      img: `/2021/mount.png`,
+      img: `/2021/mount.webp`,
       url: `https://trusting-raincoat-f84.notion.site/Mount-7b3d1d6c95ef41d6ad887b4005bf3006`,
     },
     {
-      img: `/2021/ticcle.png`,
+      img: `/2021/ticcle.webp`,
       url: `https://trusting-raincoat-f84.notion.site/Ticcle-65e100e7a20e496d905b8f68cfd9effe`,
     },
     {
-      img: `/2021/puzzling.png`,
+      img: `/2021/puzzling.webp`,
       url: `https://trusting-raincoat-f84.notion.site/Puzzling-919a713bc5cd489896027d086e2a5148`,
     },
   ],
   2022: [
     {
-      img: `/2022/studykit.jpg`,
+      img: `/2022/studykit.webp`,
       url: `https://trusting-raincoat-f84.notion.site/ba7bb071ce0341bcb0d12763d38ebadc`,
     },
     {
-      img: `/2022/unifesta.jpg`,
+      img: `/2022/unifesta.webp`,
       url: `https://trusting-raincoat-f84.notion.site/0245b69a994849aa96e5df6848f159a6`,
     },
     {
-      img: `/2022/sullog.jpg`,
+      img: `/2022/sullog.webp`,
       url: `https://trusting-raincoat-f84.notion.site/Sullog-1ecdf430e381415c93d14cd41b4f20c9`,
     },
   ],
@@ -138,7 +139,7 @@ export default function Home() {
                   <Text size={22} style={{ marginRight: 10 }}>
                     apply
                   </Text>
-                  <img src="/arrow.png" />
+                  <Arrow />
                 </a>
               </Flex>
               <Logo />
@@ -154,7 +155,7 @@ export default function Home() {
             </Flex>
           </Container>
         </Section>
-        <Section backgroundImageSrc="/section1.png" fullHeight>
+        <Section backgroundImageSrc="/section1.webp" fullHeight>
           <Flex
             justifyContent={`center`}
             style={{
@@ -341,7 +342,7 @@ export default function Home() {
         </Section>
         <Section
           snapAlign={`start`}
-          backgroundImageSrc="/background2.png"
+          backgroundImageSrc="/background2.webp"
           style={{
             paddingTop: 80,
             paddingBottom: 40,
